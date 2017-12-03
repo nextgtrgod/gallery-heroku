@@ -1,39 +1,27 @@
-# node-js-getting-started
+# gallery
+Static version of [this](https://github.com/nextgtrgod/gallery)
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+* [React.js](https://reactjs.org/)
+* [react-transition-group](https://github.com/reactjs/react-transition-group)
+* [classnames](https://github.com/JedWatson/classnames)
+* [postCSS easing gradients](https://github.com/larsenwork/postcss-easing-gradients)
+* [SpinKit](https://github.com/tobiasahlin/SpinKit)
 
-## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+![gallery screenshot](https://image.ibb.co/dtxvsb/gallery_v5.jpg)
 
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
+[DEMO](https://nextgtrgod.github.io/gallery-static)
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+## Todo
+- [x] CSS Grid layout
+- [x] node.js rendering for mobile
+- [x] Mobile layout lazyload
+- [x] Desktop layout rendering (react, react-router)
+- [x] 404 page
+- [x] react router transition
+- [x] flex fallback (ie)
+- [x] lightbox
+- [x] movement animation
+- [x] router animations sequence

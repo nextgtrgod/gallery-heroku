@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	.gallery
+		each image in images
+			.gallery__item(
+				data-loaded='false'
+				data-src=`${image.small}`
+				data-size=`${image.size || 'small'}`
+			)

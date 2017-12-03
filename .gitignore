@@ -1,3 +1,9 @@
+/.git
+/.vscode
+/node_modules
+/backup
+
+
 # Node build artifacts
 node_modules
 npm-debug.log

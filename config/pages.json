@@ -1,0 +1,21 @@
+{
+	"admin": {
+		"styles": [ "app.css" ],
+		"scripts": [ "app.js" ]
+	},
+
+	"index": {
+		"styles": [ "main.css" ],
+		"scripts": [ "main.js" ]
+	},
+
+	"mobile": {
+		"styles": [ "mobile.css" ],
+		"scripts": [ "mobile.js" ]
+	},
+
+	"404": {
+		"styles": [ "main.css" ],
+		"scripts": [ "main.js" ]
+	}
+}

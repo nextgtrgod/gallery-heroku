@@ -1,23 +1,53 @@
-const cool = require('cool-ascii-faces');
-var express = require('express');
-var app = express();
+'use strict';
 
-app.set('port', (process.env.PORT || 5000));
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const device = require('express-device');
+const bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + '/public'));
+const route = require('./lib/route');
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// user data
+const userData = require('./config/user');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
+
+// init
+const app = express();
+app.disable('x-powered-by');
+
+app.set('port', (process.env.PORT || 3000));
+app.set('view engine', 'pug')
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(device.capture());
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-cache');
+    next();
 });
 
-app.get('/cool', (req, res) => {
-	res.send(cool());
+
+// routes
+app.get('/api/getData', (req, res) => {
+    fs.readFile(`${__dirname}/api/images.json`, 'utf8', (error, data) => {
+        if (error) throw error;
+
+        res.send({
+            status: 'success',
+            data: JSON.parse(data)
+        });
+    });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+
+app.get('/admin', (req, res) => route(req, res, 'admin'));
+
+app.get('/', (req, res) => route(req, res, 'main'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res) => route(req, res, 'main'));
+
+
+// 
+app.listen(app.get('port'), () => console.log(`Listening on: http://localhost:${app.get('port')}`));

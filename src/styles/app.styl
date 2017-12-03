@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Jura')
+
+$font-family-default = 'Jura', sans-serif
+$font-size-default = 14px
+
+
+ul
+	margin 0
+	padding 0
+	list-style none
+
+button
+	border none
+	background-color transparent
+	color #FFF
+	cursor pointer
+	opacity .8
+	transition all .2s
+	&:focus
+		outline none
+	&:hover
+		opacity 1
+
+
+body
+	padding 0
+	margin 0
+	overflow-y auto
+	background-color #111
+	color #FFF
+	font-family: $font-family-default
+	font-size: $font-size-default
+	counter-reset section
+
+
+.list
+	width 50%
+	padding 2em
+	margin auto
+
+	&__item
+		position relative
+		height 20vh
+		margin 1em
+		border 1px solid #FFF
+		&:nth-child(12n + 1)
+			margin-top 4em
+			counter-increment: section
+			&:before
+				content: counter(section)
+				position absolute
+				font-size 4em
+				top -0.5em
+				left -10%
+			&:after
+				content ''
+				position absolute
+				top -2em
+				left -10%
+				right -10%
+				margin auto
+				height 1px
+				border-bottom 1px dashed #FFF
+
+
+	.preview
+		position relative
+		width 50%
+		height 100%
+		background-position left
+		background-size auto 100%
+		background-repeat no-repeat
+		image-rendering -webkit-optimize-contrast
+		z-index -1
+
+	.menu
+		position absolute
+		top 0
+		right 0
+		display flex
+		flex-direction row
+		align-items center
+		button
+			margin .5em
+			fill #FFF
+
+
+
+@import 'partials/scrollbar'
