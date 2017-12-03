@@ -1,5 +1,6 @@
-# gallery
-Static version of [this](https://github.com/nextgtrgod/gallery)
+# gallery-heroku
+
+Photo gallery (heroku)
 
 
 * [Express.js](http://expressjs.com/)
