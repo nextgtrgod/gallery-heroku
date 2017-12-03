@@ -2,7 +2,11 @@
 Static version of [this](https://github.com/nextgtrgod/gallery)
 
 
+* [Express.js](http://expressjs.com/)
+* [express-device](https://github.com/rguerreiro/express-device)
+* [Pug](https://pugjs.org)
 * [React.js](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
 * [react-transition-group](https://github.com/reactjs/react-transition-group)
 * [classnames](https://github.com/JedWatson/classnames)
 * [postCSS easing gradients](https://github.com/larsenwork/postcss-easing-gradients)
@@ -11,7 +15,7 @@ Static version of [this](https://github.com/nextgtrgod/gallery)
 
 ![gallery screenshot](https://image.ibb.co/dtxvsb/gallery_v5.jpg)
 
-[DEMO](https://nextgtrgod.github.io/gallery-static)
+[DEMO](https://protected-reaches-13605.herokuapp.com/)
 
 
 ## Todo
@@ -25,3 +29,8 @@ Static version of [this](https://github.com/nextgtrgod/gallery)
 - [x] lightbox
 - [x] movement animation
 - [x] router animations sequence
+- [x] admin page (react + redux)
+- [ ] admin auth
+- [ ] edit/post/delete photos
+- [ ] desktop preview on the same page
+- [ ] mobile preview
